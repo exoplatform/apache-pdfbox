@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document> 
+  <header> 
+    <title>PDFBox - .NET Version</title> 
+    <meta name="keywords">Java PDF Library, pdftotext, PDF to text, ..NET pdf text extraction, pdf ASP, pdf .NET</meta>
+  </header> 
+  <body> 
+    <section>
+        <title>.NET Version</title>
+        <p>
+            Even though PDFBox is written in Java, there is also a .NET version that is available.  It utilizes <a href="http://www.ikvm.net">IKVM</a>
+            to create a fully functioning PDF library for the .NET framework.  The released version contains a bin directory with all of the
+            required DLL files.  For the command line applications that are available in the Java version a native windows executable is
+            also included.  This page contains information that is specific to using the .NET version of PDFBox.
+        </p>
+        <section>
+          <title>log4j</title>
+          <p>
+          There are two ways that log4j can be configured when running the .NET version of PDFBox.  The first is to programmatically set it up like this.
+          </p>
+<source>
+    Imports org.apache.log4j
+    ...
+    
+    BasicConfigurator.configure()
+    logger.getRootLogger.setLevel(Level.ERROR)
+</source>
+        <p>The other way is to use IKVM/.NET specific features.  
+        See <a href="http://sourceforge.net/mailarchive/forum.php?thread_id=6823764&amp;forum_id=13102">this</a> IKVM forum thread for more information.<br/>
+        
+        You can use -D when you ikvmc the exe or put it in your app.config file</p>
+<source>
+    &lt;?xml version="1.0"?&gt;
+    &lt;configuration&gt;
+      &lt;appSettings&gt;
+        &lt;add key="ikvm:axis.ServerConfigFile" value="C:\Program Files\xxx\server-config.wsdd" /&gt;
+      &lt;/appSettings&gt;
+    &lt;/configuration&gt;
+</source>
+        </section>
+    </section>
+  </body>
+</document>
