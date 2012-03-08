@@ -91,7 +91,7 @@
     <property name="testoutput.dir" value="${target.dir}/test-output"/>
     <property name="testoutput-ext.dir" value="${target.dir}/test-output-ext"/>
     <property name="testinput-ext.dir" value="${target.dir}/test-input-ext"/>
-    <property name="jiraattachment.url" value="http://issues.apache.org/jira/secure/attachment"/>
+    <property name="jiraattachment.url" value="https://issues.apache.org/jira/secure/attachment"/>
     <property name="testfiles1.url" value="${jiraattachment.url}/12413230/input-ext1.jar"/>
     <property name="testfiles1.jar" value="${download.dir}/input-ext1.jar"/>
     <property name="testfiles2.url" value="${jiraattachment.url}/12413231/input-ext2.jar"/>
